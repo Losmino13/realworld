@@ -23,6 +23,9 @@ RUN cd /app/realworld && \
     pip install -r requirements.txt && \
     ./manage.py migrate
 
+RUN ls -ltr && \
+    chmod 755 start_server.sh
+
 EXPOSE 8000
 
 CMD [ "start_server.sh" ]
