@@ -24,7 +24,7 @@ RUN cd /app/realworld && \
     ./manage.py migrate
 
 RUN ls -ltr && \
-    chmod 755 start_server.sh
+    chmod 755 realworld/start_server.sh
 
 EXPOSE 8000
 
