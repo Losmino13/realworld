@@ -28,4 +28,4 @@ RUN ls -ltr && \
 
 EXPOSE 8000
 
-CMD [ "start_server.sh" ]
+CMD start_server.sh
