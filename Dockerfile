@@ -18,13 +18,10 @@ RUN git clone https://github.com/Losmino13/realworld.git
 
 RUN cd /app/realworld && \
     python3 -m venv conduit && \
-    ls -ltr && \
     source conduit/bin/activate && \
     pip install -r requirements.txt && \
-    ./manage.py migrate
-
-RUN ls -ltr && \
-    chmod 755 realworld/start_server.sh
+    ./manage.py migrate && \
+    chmod 755 start_server.sh
 
 EXPOSE 8000
 
